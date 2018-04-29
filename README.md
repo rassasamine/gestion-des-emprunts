@@ -21,3 +21,5 @@ le nombre d’exemplaires disponibles.
  Le bouton Rendre livre permet (après avoir saisi le numéro de la carte d’étudiant et le code du
 livre) de récupérer un livre déjà emprunté (c'est-à-dire ajouter la date de retour) et de mettre à
 jour le nombre d’exemplaires disponibles.
+
+![alt text](https://raw.githubusercontent.com/rassasamine/gestion-des-emprunts/master/emprunt.png)
