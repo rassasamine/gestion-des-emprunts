@@ -1,0 +1,11 @@
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\bin\Debug\Gerer_Emprunts.exe.config
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\bin\Debug\Gerer_Emprunts.exe
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\bin\Debug\Gerer_Emprunts.pdb
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\bin\Debug\Gerer_Emprunts.xml
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\obj\Debug\Gerer_Emprunts.vbprojResolveAssemblyReference.cache
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\obj\Debug\Gerer_Emprunts.Form1.resources
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\obj\Debug\Gerer_Emprunts.Resources.resources
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\obj\Debug\Gerer_Emprunts.vbproj.GenerateResource.Cache
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\obj\Debug\Gerer_Emprunts.exe
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\obj\Debug\Gerer_Emprunts.xml
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\Gerer_Emprunts\Gerer_Emprunts\obj\Debug\Gerer_Emprunts.pdb
