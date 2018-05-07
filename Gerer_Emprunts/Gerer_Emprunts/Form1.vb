@@ -23,18 +23,18 @@ Public Class Form1
     Private Sub btnVerif_Click(sender As Object, e As EventArgs) Handles btnVerif.Click
 
         If (txtCarteEtud.Text <> "") Then
-            'Recuperer numero carte etudiant à partir du text box 
+            'Recuperer le numerod de la carte d'etudiant à partir du textBox 
             numcarte = Val(txtCarteEtud.Text)
 
-            'Requette de verification
+            'Requete de verification
             Dim req As String
             req = "SELECT count(*) FROM emprunt WHERE nce =" & numcarte & " AND dateretour IS NULL"
 
-            'Executer la requette
+            'Executer la requete
             Dim cmd As OleDbCommand
             cmd = New OleDbCommand(req, connexion)
 
-            'recuperer le resultat
+            'recuperer le resultat de la requete
             Dim nb As Integer = cmd.ExecuteScalar()
 
             'manipuler le resultat
@@ -51,25 +51,25 @@ Public Class Form1
 
     Private Sub btnEnregEmprunt_Click(sender As Object, e As EventArgs) Handles btnEnregEmprunt.Click
         If (txtCarteEtud.Text <> "" And txtCodeLivre.Text <> "") Then
-            'Recuperer numero carte etudiant et numero du livre à partir des text box et la date systeme
+            'Recuperer le numero de la carte d'etudiant et le numero du livre à partir des textBox et la date systeme
             numcarte = Val(txtCarteEtud.Text)
             numlivre = Val(txtCodeLivre.Text)
             datesys = DateTime.Now().ToString()
 
-            'Requette d'insertion
+            'Requete d'insertion
             Dim insertreq As String
-            insertreq = "INSERT INTO emprunt(nce,codelivre,dateemprunt) VALUES (" & numcarte & "," & numlivre & "," & "'" & datesys & "'" & ")"
+            insertreq = "INSERT INTO emprunt(nce,codelivre,dateemprunt) VALUES (" & numcarte & "," & numlivre & ",'" & datesys & "')"
 
-            'Executer la requette
+            'Executer la requete
             Dim insertcmd As OleDbCommand
             insertcmd = New OleDbCommand(insertreq, connexion)
             insertcmd.ExecuteNonQuery()
 
-            'Requette de mise à jour
+            'Requete de mise à jour
             Dim majreq As String
-            majreq = "UPDATE livre SET nbexemp = nbexemp - 1 WHERE codelivre =" & numlivre & ""
+            majreq = "UPDATE livre SET nbexemp = nbexemp - 1 WHERE codelivre =" & numlivre
 
-            'Executer la requette
+            'Executer la requete
             Dim majcmd As OleDbCommand
             majcmd = New OleDbCommand(majreq, connexion)
             majcmd.ExecuteNonQuery()
@@ -81,25 +81,25 @@ Public Class Form1
 
     Private Sub btnRendreLivre_Click(sender As Object, e As EventArgs) Handles btnRendreLivre.Click
         If (txtCarteEtud.Text <> "" And txtCodeLivre.Text <> "") Then
-            'Recuperer numero carte etudiant et numero du livre à partir des text box et la date systeme
+            'Recuperer le numero de la carte d'etudiant et le numero du livre à partir des textBox et la date systeme
             numcarte = Val(txtCarteEtud.Text)
             numlivre = Val(txtCodeLivre.Text)
             datesys = DateTime.Now().ToString()
 
-            'Requette d'insertion
+            'Requete d'insertion
             Dim insertreq As String
-            insertreq = "UPDATE emprunt SET dateretour = " & "'" & datesys & "'" & " WHERE nce = " & numcarte & " AND codelivre = " & numlivre & " AND dateretour IS NULL"
+            insertreq = "UPDATE emprunt SET dateretour = '" & datesys & "' WHERE nce = " & numcarte & " AND codelivre = " & numlivre & " AND dateretour IS NULL"
 
-            'Executer la requette
+            'Executer la requete
             Dim insertcmd As OleDbCommand
             insertcmd = New OleDbCommand(insertreq, connexion)
             insertcmd.ExecuteNonQuery()
 
-            'Requette de mise à jour
+            'Requete de mise à jour
             Dim majreq As String
-            majreq = "UPDATE livre SET nbexemp = nbexemp + 1 WHERE codelivre =" & numlivre & ""
+            majreq = "UPDATE livre SET nbexemp = nbexemp + 1 WHERE codelivre =" & numlivre
 
-            'Executer la requette
+            'Executer la requete
             Dim majcmd As OleDbCommand
             majcmd = New OleDbCommand(majreq, connexion)
             majcmd.ExecuteNonQuery()
@@ -112,18 +112,18 @@ Public Class Form1
     Private Sub btnDispo_Click(sender As Object, e As EventArgs) Handles btnDispo.Click
 
         If (txtCodeLivre.Text <> "") Then
-            'Recuperer numero du livre à partir du text box 
+            'Recuperer le numero du livre à partir du texBox 
             numlivre = Val(txtCodeLivre.Text)
 
-            'Requette de verification
+            'Requete de verification
             Dim req As String
-            req = "SELECT nbexemp FROM livre WHERE codelivre =" & numlivre & ""
+            req = "SELECT nbexemp FROM livre WHERE codelivre =" & numlivre
 
-            'Executer la requette
+            'Executer la requete
             Dim cmd As OleDbCommand
             cmd = New OleDbCommand(req, connexion)
 
-            'recupere le resultat
+            'recuperer le resultat
             Dim nbexemp As Integer = cmd.ExecuteScalar()
 
             'manipuler le resultat
@@ -135,7 +135,6 @@ Public Class Form1
         Else
             MsgBox("Veuillez entrer le code du livre à verifier !")
         End If
-
 
     End Sub
 End Class

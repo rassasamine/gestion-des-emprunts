@@ -178,7 +178,7 @@ Partial Class Form1
         Me.Controls.Add(Me.gbLivre)
         Me.Controls.Add(Me.gbEtudiant)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Gestion_Emprunts"
         Me.gbEtudiant.ResumeLayout(False)
         Me.gbEtudiant.PerformLayout()
         Me.gbLivre.ResumeLayout(False)
